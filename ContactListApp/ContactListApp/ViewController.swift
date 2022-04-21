@@ -26,6 +26,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var TableViewOutlet: UITableView!
     
     var contactNames : [String]  = []
+    var contacts = NSDictionary()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,18 +42,45 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let databaseRef = Database.database().reference()
         databaseRef.observeSingleEvent(of: .value){
         snapshot in
-            let contacts = snapshot.value as! NSDictionary
-            
-            self.contactNames = contacts.allKeys as!
+            self.contacts = snapshot.value as! NSDictionary
+
+            self.contactNames = self.contacts.allKeys as!
             [String]
             
             //reload the data
             self.TableViewOutlet.reloadData()
+            
+            print(self.contacts)
+
         }
         
+    }
         
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+               let transistion = segue.identifier
+               if transistion == "ResultSegue"{
+                   let destination = segue.destination as! ResultViewController
+                   let contactClicked = contactNames[(TableViewOutlet.indexPathForSelectedRow?.row)!]
+                   for (key, value) in self.contacts{
+                       if key as! String == contactClicked{
+                           for (key1, value1) in value as! [String:Any]{
+                               if key1 == "Email"{
+                                   destination.email = value1 as! String
+                               }
+                               else if key1 == "PhoneNumber"{
+                                   destination.phoneNum = value1 as! Int
+                               }
+                           }
+                       }
+                       print(key)//String
+                       print(value)//Dictionary
+                   }
+                   
+               }
+        }
     }
 
 
-}
+
+
 

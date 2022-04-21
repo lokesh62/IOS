@@ -19,6 +19,7 @@
 		944F4011280F437700096DAD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 944F4010280F437700096DAD /* GoogleService-Info.plist */; };
 		944F4014280F454100096DAD /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 944F4013280F454100096DAD /* FirebaseAnalytics */; };
 		944F4016280F454100096DAD /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 944F4015280F454100096DAD /* FirebaseDatabase */; };
+		94575D4E2811E5FE00B55A93 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94575D4D2811E5FE00B55A93 /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		944F4001280F417100096DAD /* ContactListAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListAppUITests.swift; sourceTree = "<group>"; };
 		944F4003280F417100096DAD /* ContactListAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		944F4010280F437700096DAD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		94575D4D2811E5FE00B55A93 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				944F3FE4280F416F00096DAD /* ViewController.swift */,
 				944F4010280F437700096DAD /* GoogleService-Info.plist */,
 				944F3FE6280F416F00096DAD /* Main.storyboard */,
+				94575D4D2811E5FE00B55A93 /* ResultViewController.swift */,
 				944F3FE9280F417000096DAD /* Assets.xcassets */,
 				944F3FEB280F417000096DAD /* LaunchScreen.storyboard */,
 				944F3FEE280F417000096DAD /* Info.plist */,
@@ -276,6 +279,7 @@
 				944F3FE5280F416F00096DAD /* ViewController.swift in Sources */,
 				944F3FE1280F416F00096DAD /* AppDelegate.swift in Sources */,
 				944F3FE3280F416F00096DAD /* SceneDelegate.swift in Sources */,
+				94575D4E2811E5FE00B55A93 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
